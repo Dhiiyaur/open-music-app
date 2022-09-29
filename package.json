@@ -1,0 +1,38 @@
+{
+  "name": "open_music",
+  "version": "3.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-prod": "node ./src/app.js",
+    "start-dev": "nodemon ./src/app.js",
+    "lint": "eslint ./src & eslint ./migrations",
+    "lint-fix": "eslint --fix ./src & eslint --fix ./migrations",
+    "migrate": "node-pg-migrate",
+    "migrate-up": "node-pg-migrate up",
+    "migrate-down": "node-pg-migrate down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "@hapi/inert": "^7.0.0",
+    "@hapi/jwt": "^3.0.0",
+    "amqplib": "^0.10.3",
+    "auto-bind": "^4.0.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.2",
+    "joi": "^17.6.0",
+    "nanoid": "^3.3.4",
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.8.0",
+    "redis": "^4.3.1"
+  }
+}
